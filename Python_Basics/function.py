@@ -106,7 +106,46 @@ def main():
         print(f"Task completed after sleeping for {sleep_time:.2f} seconds")
 
     my_task()
+
+    try:
+        number = int(input("Enter a number: "))
+
+        if number < 18:
+            print("minor")
+        else:
+            print("legal")
+    except ValueError:
+        print("That's not a valid number.")
+
+
+    def even_or_odd(num):
+        if num % 2 == 0:
+            return "Even"
+        else: 
+            return "Odd"
     
+    print(even_or_odd(4))
+    print(even_or_odd(5))
+
+    def factorial(n):
+        product = 1
+        if n == 0:
+            return 1
+        else:
+            for i in range(1, n + 1):
+                product *= i
+            return product
+        
+    print(factorial(3))
+
+    def sumArr(arr):
+        sum = 0
+        for array_num in arr:
+            sum += array_num
+        return sum
+    fav_num = [7, 7, 7]
+    print(sumArr(fav_num))
+
 if __name__ == "__main__":
     main()
 
