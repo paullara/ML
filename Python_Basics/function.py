@@ -146,6 +146,20 @@ def main():
     fav_num = [7, 7, 7]
     print(sumArr(fav_num))
 
+    def fibo(n):
+        if n <= 0:
+            return "Invalid Input"
+            
+        first_term = 0
+        second_term = 1
+
+        for _ in range(2, n):
+            next_term = first_term + second_term
+            first_term = second_term
+            second_term = next_term
+        return second_term
+    print(fibo(0))    
+
 if __name__ == "__main__":
     main()
 
